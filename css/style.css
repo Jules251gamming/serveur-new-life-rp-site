@@ -1,5 +1,5 @@
 /* ================================================= */
-/* VARIABLES ET STYLES GÉNÉRAUX             */
+/* VARIABLES ET STYLES GÉNÉRAUX                      */
 /* ================================================= */
 
 :root {
@@ -54,13 +54,21 @@ h1, h2, h3 {
 }
 
 /* ================================================= */
-/* STRUCTURE ET NAVIGATION               */
+/* STRUCTURE ET NAVIGATION                           */
 /* ================================================= */
 
 /* En-tête (pour la page d'accueil) */
 .hero-section {
     /* Si vous mettez une image de fond GTA RP, l'ajouter ici */
     /* background: url('../img/banniere.jpg') no-repeat center center/cover; */
+    
+    /* --- HAUTEUR ET CENTRAGE DU CONTENU (Modification) --- */
+    min-height: 100vh; /* Prend au moins 100% de la hauteur de la fenêtre (Viewport Height) */
+    display: flex; /* Utiliser Flexbox pour centrer le contenu verticalement */
+    flex-direction: column;
+    justify-content: center; /* Centre le contenu verticalement */
+    /* --------------------------------------------------- */
+    
     padding: 80px 0 120px 0;
     text-align: center;
 }
@@ -70,8 +78,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    /* Optionnel: pour un effet professionnel sur une image de fond */
-    /* background-color: rgba(0, 0, 0, 0.7); */ 
+    /* Place la navigation en haut (nécessaire avec le "display: flex" du .hero-section) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; 
+    z-index: 10;
 }
 
 .logo {
@@ -106,7 +118,10 @@ nav ul li a:hover, nav ul li a.active {
 /* Contenu de la Bannière (Page d'accueil) */
 .hero-content {
     max-width: 800px;
-    margin: 50px auto 0 auto;
+    /* Le 'margin: auto' combiné à 'justify-content: center' permet le centrage */
+    margin: 0 auto; 
+    /* Ajout d'un padding pour que le contenu ne touche pas les bords */
+    padding-top: 50px; 
 }
 
 .hero-content h1 {
@@ -122,7 +137,7 @@ nav ul li a:hover, nav ul li a.active {
 
 
 /* ================================================= */
-/* STYLES DES SECTIONS COMMUNES           */
+/* STYLES DES SECTIONS COMMUNES                      */
 /* ================================================= */
 
 main {
@@ -163,8 +178,41 @@ hr {
     opacity: 0.5;
 }
 
+
 /* ================================================= */
-/* STYLES SPÉCIFIQUES AU RÈGLEMENT        */
+/* STYLES SPÉCIFIQUES AUX CARTES DE FONCTIONNALITÉS  */
+/* ================================================= */
+
+.cards-grid {
+    display: grid;
+    /* Crée 3 colonnes de taille égale (s'adapte aux petits écrans) */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; /* Espace entre les cartes */
+    padding: 20px 0;
+}
+
+.feature-card {
+    background-color: var(--background-card);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 5px solid var(--orange-accent); /* Bande orange pour l'accent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px); /* Effet d'élévation au survol */
+}
+
+.feature-card h3 {
+    color: var(--orange-accent);
+    margin-top: 0;
+}
+
+
+/* ================================================= */
+/* STYLES SPÉCIFIQUES AU RÈGLEMENT                   */
 /* ================================================= */
 
 .regle-section h2 {
@@ -188,8 +236,9 @@ hr {
     font-weight: 600;
 }
 
+
 /* ================================================= */
-/* PIED DE PAGE (Footer)           */
+/* PIED DE PAGE (Footer)                             */
 /* ================================================= */
 
 footer {
