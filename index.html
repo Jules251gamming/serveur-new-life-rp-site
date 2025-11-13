@@ -1,13 +1,36 @@
-<nav>
-    <div class="logo">Serveur RP</div>
-    <ul>
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="notre-histoire.html">Notre Histoire</a></li> <li><a href="reglement.html">Règlement</a></li>
-        <li><a href="https://discord.gg/votre_lien" target="_blank" class="btn-orange">Rejoindre Discord</a></li> 
-    </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serveur New Life RP | Accueil</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<section id="histoire">
+    <header class="hero-section">
+        <nav>
+            <div class="logo">Serveur RP</div>
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="notre-histoire.html">Notre Histoire</a></li> 
+                <li><a href="reglement.html">Règlement</a></li>
+                <li><a href="https://discord.gg/votre_lien" target="_blank" class="btn-orange">Rejoindre Discord</a></li> 
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Le Futur du Roleplay.</h1>
+            <p>Notre serveur est en développement (BETA). Une expérience professionnelle vous attend.</p>
+            <a href="#fonctionnalites" class="btn-orange">Découvrir les fonctionnalités</a>
+        </div>
+    </header>
+
+    <main class="content-container">
+        
+        <section id="histoire">
             <h2 class="title-orange">Notre Héritage</h2>
             <p class="subtitle">Un projet né d'une passion en 2020.</p>
 
@@ -19,20 +42,57 @@
             <hr>
         </section>
 
-        ```
+        <section id="fonctionnalites">
+            <h2 class="title-orange">Nos Fonctionnalités Uniques</h2>
+            <p class="subtitle">Ce qui fait la différence sur New Life RP.</p>
 
-## Étape 3 : Mise à Jour de la Navigation et du CSS
+            <div class="cards-grid">
+                <div class="feature-card">
+                    <h3>Économie Réaliste</h3>
+                    <p>Un système économique poussé avec des emplois légaux et illégaux équilibrés.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Système de Gangs</h3>
+                    <p>Possibilité de créer ou de rejoindre des organisations avec des QG personnalisés.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Développement Constant</h3>
+                    <p>Notre équipe est active et ajoute de nouvelles mises à jour chaque semaine.</p>
+                </div>
+            </div>
+            
+            <hr>
+        </section>
 
-### 3.1. Mise à Jour de `reglement.html`
+        <section class="regle-section">
+            <h2 class="title-orange">Extrait du Règlement</h2>
+            <p class="subtitle">Respecter ces bases pour une expérience RP de qualité.</p>
+            
+            <div class="regle-item">
+                <h3>Règle 1 : Fear RP</h3>
+                <p>Vous devez toujours simuler la peur lorsque votre vie est menacée.</p>
+            </div>
+            <div class="regle-item">
+                <h3>Règle 2 : Le Metagaming</h3>
+                <p>Il est strictement interdit d'utiliser des informations obtenues en dehors du RP (Meta).</p>
+            </div>
+            
+            <a href="reglement.html" class="btn-primary" style="margin-top: 20px;">Lire le Règlement Complet</a>
+        </section>
+        
+        <hr>
 
-Dans votre fichier **`reglement.html`**, vous devez également ajouter le lien vers la nouvelle page dans la barre de navigation.
+        <section id="rejoindre" style="text-align: center;">
+            <h2 class="title-orange">Prêt à Nous Rejoindre ?</h2>
+            <p class="subtitle">Le début de votre nouvelle vie RP commence ici.</p>
+            <a href="https://discord.gg/votre_lien" target="_blank" class="btn-orange" style="font-size: 1.2em;">Accès Direct au Discord</a>
+        </section>
 
-```html
-<nav>
-    <div class="logo">Serveur RP</div>
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="notre-histoire.html">Notre Histoire</a></li> <li><a href="reglement.html" class="active">Règlement</a></li>
-        <li><a href="#" class="btn-orange">Rejoindre Discord</a></li> 
-    </ul>
-</nav>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Serveur New Life RP. Tous droits réservés.</p>
+    </footer>
+    
+</body>
+</html>
