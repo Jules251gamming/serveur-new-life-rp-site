@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Règlement Officiel | Nom du Serveur RP</title>
     
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -23,53 +24,53 @@
     </header>
 
     <main class="content-container">
-        <h1 class="title-orange">Règlement Officiel du Serveur</h1>
-        <p class="subtitle">Le respect de ces règles garantit une expérience de jeu juste et immersive pour tous.</p>
+        <h1 class="title-orange" data-aos="fade-up">Règlement Officiel du Serveur</h1>
+        <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Le respect de ces règles garantit une expérience de jeu juste et immersive pour tous.</p>
         
-        <hr>
+        <hr data-aos="fade-up" data-aos-delay="200">
 
         <section class="regle-section">
-            <h2>1. Règles Générales du Roleplay</h2>
+            <h2 data-aos="fade-up">1. Règles Générales du Roleplay</h2>
             
-            <div class="regle-item">
+            <div class="regle-item" data-aos="fade-right">
                 <h3>1.1. Le Fairplay (Fear RP)</h3>
                 <p>Vous devez craindre pour la vie de votre personnage et réagir de manière réaliste aux menaces crédibles (armes, police, etc.). **Toute action mettant votre vie en danger sans raison RP valable (comme sauter d'un pont pour échapper à la police) est strictement interdite (Fail RP).**</p>
             </div>
             
-            <div class="regle-item">
+            <div class="regle-item" data-aos="fade-right" data-aos-delay="100">
                 <h3>1.2. Interdiction du Pain RP / VDM</h3>
                 <p>Il est strictement interdit de jouer un personnage qui ne ressent pas la douleur ou qui est invulnérable. Le jeu doit rester cohérent. **La VDM (Vol de Mort) ou l'utilisation d'un véhicule pour tuer sans scène RP préalable est également interdite.**</p>
             </div>
             
-            <div class="regle-item">
+            <div class="regle-item" data-aos="fade-right" data-aos-delay="200">
                 <h3>1.3. L'utilisation du /me et /do</h3>
                 <p>Utilisez les commandes **/me** pour décrire une action visible non permise par le jeu (ex: * /me vérifie son pouls*) et **/do** pour décrire l'environnement ou l'état de votre personnage (ex: * /do le moteur est-il chaud?*). Leur utilisation est obligatoire pour les scènes complexes.</p>
             </div>
         </section>
 
         <section class="regle-section">
-            <h2>2. Communication et Comportement</h2>
+            <h2 data-aos="fade-up">2. Communication et Comportement</h2>
             
-            <div class="regle-item">
+            <div class="regle-item" data-aos="fade-left">
                 <h3>2.1. Le Metagaming (MG)</h3>
                 <p>Il est strictement interdit d'utiliser des informations obtenues **Hors-Rôle (HRP)**, par exemple sur Discord, pour les intégrer à votre jeu de rôle. **Le chat vocal/texte est strictement réservé au In-Rôle (IRP).**</p>
             </div>
             
-            <div class="regle-item">
+            <div class="regle-item" data-aos="fade-left" data-aos-delay="100">
                 <h3>2.2. Respect HRP et Trolling</h3>
                 <p>Le **Hors-Rôle (HRP)** doit être minimal. Le respect envers les autres joueurs et le staff est primordial. **Tout comportement toxique, insultant ou le 'Trolling' est passible d'un bannissement immédiat.**</p>
             </div>
         </section>
 
         <section class="regle-section">
-            <h2>3. Zones et Actions Spécifiques</h2>
+            <h2 data-aos="fade-up">3. Zones et Actions Spécifiques</h2>
             
-            <div class="regle-item">
+            <div class="regle-item" data-aos="fade-right">
                 <h3>3.1. Zones dites "Safe"</h3>
                 <p>**Toute action illégale (vol, braquage, agression) est strictement interdite dans les Zones Safe** (ex : Concessionnaire, Hôpital, Fourrière, Banques). Les enlèvements ne peuvent pas débuter ou se terminer dans ces zones.</p>
             </div>
             
-            <div class="regle-item">
+            <div class="regle-item" data-aos="fade-right" data-aos-delay="100">
                 <h3>3.2. Le Coon RP (COP RP)</h3>
                 <p>Le jeu des forces de l'ordre (Police/Gendarmerie) doit respecter les lois en vigueur dans le jeu. **Toute abus de pouvoir ou utilisation de son statut pour des fins personnelles est interdit.**</p>
             </div>
@@ -81,5 +82,12 @@
         <p>&copy; 2025 Nom du Serveur RP. Un Roleplay de qualité.</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, 
+            once: true 
+        });
+    </script>
 </body>
 </html>

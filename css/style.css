@@ -4,23 +4,30 @@
 
 :root {
     --orange-accent: #FF6600; /* Orange vif pour les accents, les boutons et les titres */
-    --background-dark: #1A1A1A; /* Fond sombre principal */
+    --background-dark: #1A1A1A; /* Fond sombre principal (pour le haut de la page) */
     --background-card: #222222; /* Fond pour les cartes/blocs (règles, fonctionnalités) */
     --text-light: #FFFFFF; /* Texte blanc pour la lisibilité sur fond sombre */
     --text-secondary: #AAAAAA; /* Gris clair pour les sous-titres et les paragraphes secondaires */
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Police moderne importée via HTML */
+    font-family: 'Poppins', sans-serif; 
     margin: 0;
     padding: 0;
-    background-color: var(--background-dark); 
+    
+    /* MODIFICATION CLÉ : Dégradé plus doux du noir vers le bleu très foncé */
+    background: linear-gradient(to bottom, 
+                #1A1A1A 0%,      /* Noir pur au début */
+                #12121e 50%,     /* Transition progressive vers un bleu nuit très sombre */
+                #0b0b2b 100%);   /* Bleu nuit plus profond à la fin */
+    background-attachment: fixed; /* Le fond reste fixe, donnant l'impression que la couleur change à mesure que le contenu défile. */
+    
     color: var(--text-light); 
     line-height: 1.6;
 }
 
 a {
-    color: var(--orange-accent); /* Liens par défaut en orange */
+    color: var(--orange-accent); 
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -34,23 +41,49 @@ h1, h2, h3 {
     color: var(--text-light);
 }
 
-/* --- Boutons et Accents Oranges --- */
+/* --- Boutons et Accents Oranges avec dégradé animé au survol --- */
 .btn-orange, .btn-primary {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--orange-accent);
+    background-color: var(--orange-accent); /* Fond par défaut */
     color: white;
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background 0.5s ease, transform 0.2s, box-shadow 0.3s; 
+    
+    position: relative;
+    overflow: hidden; 
+    z-index: 1; 
 }
 
 .btn-orange:hover, .btn-primary:hover {
-    background-color: #E65C00;
-    transform: translateY(-1px);
+    background-color: transparent; 
+    transform: translateY(-2px); 
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.7); 
+}
+
+/* Pseudo-élément pour l'effet de dégradé au survol des boutons */
+.btn-orange::before, .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #FF6600, #E65C00, #FF6600); /* Dégradé pour le survol */
+    background-size: 200% 200%;
+    opacity: 0; 
+    transition: opacity 0.5s ease, background-position 0.5s ease;
+    z-index: -1; 
+    border-radius: 4px; 
+}
+
+.btn-orange:hover::before, .btn-primary:hover::before {
+    opacity: 1; 
+    background-position: 100% 0%; 
 }
 
 /* ================================================= */
@@ -59,17 +92,30 @@ h1, h2, h3 {
 
 /* En-tête (pour la page d'accueil) */
 .hero-section {
-    /* Si vous mettez une image de fond GTA RP, l'ajouter ici */
-    /* background: url('../img/banniere.jpg') no-repeat center center/cover; */
-    
-    /* HAUTEUR ET CENTRAGE DU CONTENU */
     min-height: 100vh; 
     display: flex; 
     flex-direction: column;
     justify-content: center; 
-    
     padding: 80px 0 120px 0;
     text-align: center;
+
+    /* NOUVEAU DÉGRADÉ ORANGE ANIMÉ POUR LA BANNIÈRE (plus subtil) */
+    background: linear-gradient(-45deg, #222222, #FF6600, #222222, #E65C00, #222222); 
+    background-size: 400% 400%; 
+    animation: heroGradientMovement 25s ease infinite; 
+}
+
+/* Clé d'animation pour le mouvement du fond de la bannière */
+@keyframes heroGradientMovement {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 nav {
@@ -77,7 +123,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    /* Place la navigation en haut (nécessaire avec le "display: flex" du .hero-section) */
     position: absolute;
     top: 0;
     left: 0;
@@ -88,7 +133,7 @@ nav {
 .logo {
     font-size: 1.8em;
     font-weight: 700;
-    color: var(--orange-accent); /* Logo en orange */
+    color: var(--orange-accent); 
 }
 
 nav ul {
@@ -130,6 +175,28 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 1.2em;
     color: var(--text-secondary);
     margin-bottom: 40px;
+    
+    /* ANIMATION : Glitch Textuel (moins fréquente) */
+    animation: textGlitch 20s infinite step-end; 
+}
+
+/* Clés d'animation pour le Glitch */
+@keyframes textGlitch {
+    0% {
+        text-shadow: 2px 0 0 #ff00c3, -2px 0 0 #00ffff;
+        transform: translate(0);
+    }
+    5% {
+        text-shadow: -2px 0 0 #ff00c3, 2px 0 0 #00ffff;
+        transform: translate(2px, 2px);
+    }
+    10% {
+        text-shadow: 0 0 0 #ff00c3, 0 0 0 #00ffff;
+        transform: translate(0);
+    }
+    100% {
+        text-shadow: none;
+    }
 }
 
 
@@ -177,6 +244,38 @@ hr {
 
 
 /* ================================================= */
+/* ANIMATION TEXTE - Typewriter                      */
+/* ================================================= */
+
+.typewriter-text {
+    overflow: hidden; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: typing 3.5s steps(40, end) forwards; 
+    width: 0; 
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Curseur clignotant */
+.typewriter-text::after {
+    content: '|';
+    border-right: .08em solid var(--orange-accent); 
+    animation: 
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--orange-accent); }
+}
+
+
+/* ================================================= */
 /* STYLES SPÉCIFIQUES À L'HISTOIRE (RÉSUMÉ)          */
 /* ================================================= */
 
@@ -186,7 +285,7 @@ hr {
     padding: 30px;
     background-color: var(--background-card);
     border-radius: 10px;
-    border-left: 5px solid var(--orange-accent); /* Ligne d'accent */
+    border-left: 5px solid var(--orange-accent); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
@@ -207,26 +306,44 @@ hr {
 /* STYLES SPÉCIFIQUES AUX CARTES DE FONCTIONNALITÉS  */
 /* ================================================= */
 
+/* Clés d'animation pour le dégradé pulsé sur les cartes (plus subtil) */
+@keyframes cardGradientPulse {
+    0% {
+        background-position: 0% 50%;
+        box-shadow: 0 0 5px rgba(255, 102, 0, 0.1); 
+    }
+    50% {
+        background-position: 100% 50%;
+        box-shadow: 0 0 10px rgba(255, 102, 0, 0.3); 
+    }
+    100% {
+        background-position: 0% 50%;
+        box-shadow: 0 0 5px rgba(255, 102, 0, 0.1);
+    }
+}
+
 .cards-grid {
     display: grid;
-    /* Crée 3 colonnes de taille égale (s'adapte aux petits écrans) */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 30px; /* Espace entre les cartes */
+    gap: 30px; 
     padding: 20px 0;
 }
 
 .feature-card {
-    background-color: var(--background-card);
     padding: 30px;
     border-radius: 8px;
-    border-top: 5px solid var(--orange-accent); /* Bande orange pour l'accent */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-top: 5px solid var(--orange-accent); 
     text-align: left;
     transition: transform 0.3s;
+    
+    /* Fond dégradé animé pour les cartes (plus subtil) */
+    background: linear-gradient(-45deg, var(--background-card), #333333, var(--background-card));
+    background-size: 200% 200%; 
+    animation: cardGradientPulse 10s infinite ease-in-out; 
 }
 
 .feature-card:hover {
-    transform: translateY(-5px); /* Effet d'élévation au survol */
+    transform: translateY(-5px); 
 }
 
 .feature-card h3 {
@@ -266,9 +383,9 @@ hr {
 /* ================================================= */
 
 footer {
-    background-color: #0F0F0F; /* Très sombre */
+    background-color: #0F0F0F; 
     color: var(--text-secondary);
     text-align: center;
     padding: 20px 0;
-    border-top: 2px solid rgba(255, 102, 0, 0.3); /* Petite ligne orange */
+    border-top: 2px solid rgba(255, 102, 0, 0.3); 
 }
