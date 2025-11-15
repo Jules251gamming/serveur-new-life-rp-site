@@ -1,93 +1,281 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Règlement Officiel | Nom du Serveur RP</title>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Règlement du Serveur - Serveur RP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="subpage-header">
-        <nav>
-            <div class="logo">Serveur RP</div>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="notre-histoire.html">Notre Histoire</a></li> 
-                <li><a href="reglement.html" class="active">Règlement</a></li>
-                <li><a href="https://discord.gg/votre_lien" target="_blank" class="btn-orange">Rejoindre Discord</a></li> 
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <a href="index.html" class="logo">Serveur RP</a> 
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="notre-histoire.html">Notre Histoire</a></li>
+            <li><a href="reglement.html" class="active">Règlement</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="#" class="btn-orange">Rejoindre Discord</a></li>
+        </ul>
+    </nav>
 
-    <main class="content-container">
-        <h1 class="title-orange" data-aos="fade-up">Règlement Officiel du Serveur</h1>
-        <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Le respect de ces règles garantit une expérience de jeu juste et immersive pour tous.</p>
-        
-        <hr data-aos="fade-up" data-aos-delay="200">
+    <main>
+        <div class="content-container">
 
-        <section class="regle-section">
-            <h2 data-aos="fade-up">1. Règles Générales du Roleplay</h2>
-            
-            <div class="regle-item" data-aos="fade-right">
-                <h3>1.1. Le Fairplay (Fear RP)</h3>
-                <p>Vous devez craindre pour la vie de votre personnage et réagir de manière réaliste aux menaces crédibles (armes, police, etc.). **Toute action mettant votre vie en danger sans raison RP valable (comme sauter d'un pont pour échapper à la police) est strictement interdite (Fail RP).**</p>
-            </div>
-            
-            <div class="regle-item" data-aos="fade-right" data-aos-delay="100">
-                <h3>1.2. Interdiction du Pain RP / VDM</h3>
-                <p>Il est strictement interdit de jouer un personnage qui ne ressent pas la douleur ou qui est invulnérable. Le jeu doit rester cohérent. **La VDM (Vol de Mort) ou l'utilisation d'un véhicule pour tuer sans scène RP préalable est également interdite.**</p>
-            </div>
-            
-            <div class="regle-item" data-aos="fade-right" data-aos-delay="200">
-                <h3>1.3. L'utilisation du /me et /do</h3>
-                <p>Utilisez les commandes **/me** pour décrire une action visible non permise par le jeu (ex: * /me vérifie son pouls*) et **/do** pour décrire l'environnement ou l'état de votre personnage (ex: * /do le moteur est-il chaud?*). Leur utilisation est obligatoire pour les scènes complexes.</p>
-            </div>
-        </section>
+            <section id="reglement-header">
+                <h2 class="title-orange" data-aos="fade-down">📜 Règlement Officiel du Serveur</h2>
+                <p class="subtitle" data-aos="fade-up">Le respect de ces 130+ règles garantit une expérience Roleplay de qualité pour tous. Toute infraction est passible de sanction.</p>
+                <hr>
+            </section>
 
-        <section class="regle-section">
-            <h2 data-aos="fade-up">2. Communication et Comportement</h2>
+            <section class="regle-section">
+                <h2 data-aos="fade-right">1. Règles Générales & MetaGaming (R1-R30)</h2>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>1.1 Définitions et Bases (R1-R10)</h3>
+                    <p>La base pour un RP immersif et équitable.</p>
+                    <ul class="features">
+                        <li>(R1) Le **MetaGaming (MG)** est strictement interdit. (Utiliser des informations acquises HRP en RP).</li>
+                        <li>(R2) Le **PowerGaming (PG)** est interdit. (Faire des actions irréalistes ou se donner un avantage injuste).</li>
+                        <li>(R3) L'**Evasion Roleplay (ERP)** est interdit. (Quitter une scène RP sans autorisation HRP).</li>
+                        <li>(R4) L'utilisation de tout logiciel tiers (cheat, macro) est strictement bannie.</li>
+                        <li>(R5) Votre personnage doit avoir une histoire cohérente (Background).</li>
+                        <li>(R6) Le Fair-Play est la règle d'or. Pensez au plaisir de l'autre joueur.</li>
+                        <li>(R7) Le spam vocal ou textuel est interdit.</li>
+                        <li>(R8) Le stream sniping est interdit.</li>
+                        <li>(R9) La publicité pour d'autres serveurs est interdite.</li>
+                        <li>(R10) Tout comportement toxique HRP est sanctionné par bannissement.</li>
+                    </ul>
+                </div>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>1.2 Respect de la Vie (R11-R20)</h3>
+                    <p>Le **Fear RP** est primordial. La vie de votre personnage compte.</p>
+                    <ul class="features">
+                        <li>(R11) Vous devez jouer la peur de la mort (Fear RP).</li>
+                        <li>(R12) Pointer une arme sur vous sans raison vous oblige à vous soumettre.</li>
+                        <li>(R13) Ne pas jouer l'incapacité de votre personnage après un accident grave est interdit.</li>
+                        <li>(R14) Le **Vomit RP** (se venger après un coma) est interdit. Vous oubliez la scène.</li>
+                        <li>(R15) Le braquage de joueurs dans les zones sécurisées (Concession, Hôpital, etc.) est interdit.</li>
+                        <li>(R16) Le **Car-Kill** (utiliser un véhicule pour tuer volontairement) est un bannissement immédiat.</li>
+                        <li>(R17) Le meurtre sans raison RP valable est interdit (Random DeathMatch - RDM).</li>
+                        <li>(R18) L'utilisation abusive du *Noclip* (mode spectateur ou administrateur) est interdite.</li>
+                        <li>(R19) Toute menace HRP (DDOS, etc.) est punie par un bannissement définitif.</li>
+                        <li>(R20) Vous devez parler et agir dans la peau de votre personnage en jeu.</li>
+                    </ul>
+                </div>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>1.3 Interactions et Comportement HRP (R21-R30)</h3>
+                    <p>Maintien du respect entre joueurs HRP.</p>
+                    <ul class="features">
+                        <li>(R21) Respecter les décisions des administrateurs et modérateurs.</li>
+                        <li>(R22) Les insultes HRP ne sont pas tolérées, même en cas de provocation.</li>
+                        <li>(R23) Les demandes d'avantages HRP (argent, items) aux administrateurs sont interdites.</li>
+                        <li>(R24) Ne pas utiliser les emotes de manière abusive ou pour briser le RP.</li>
+                        <li>(R25) Le "Fail RP" (actions qui brisent l'immersion) est sanctionné.</li>
+                        <li>(R26) Le RP à caractère sexuel (ERP) est strictement interdit.</li>
+                        <li>(R27) Le RP de harcèlement ou d'extrême violence doit être évité et nécessite un consentement mutuel HRP.</li>
+                        <li>(R28) Ne pas utiliser les bugs ou exploits pour un avantage. Signalez-les immédiatement.</li>
+                        <li>(R29) L'abus des tchats HRP pour influencer le RP est interdit.</li>
+                        <li>(R30) Toute utilisation d'informations personnelles HRP contre un joueur est définitivement bannie.</li>
+                    </ul>
+                </div>
+            </section>
             
-            <div class="regle-item" data-aos="fade-left">
-                <h3>2.1. Le Metagaming (MG)</h3>
-                <p>Il est strictement interdit d'utiliser des informations obtenues **Hors-Rôle (HRP)**, par exemple sur Discord, pour les intégrer à votre jeu de rôle. **Le chat vocal/texte est strictement réservé au In-Rôle (IRP).**</p>
-            </div>
-            
-            <div class="regle-item" data-aos="fade-left" data-aos-delay="100">
-                <h3>2.2. Respect HRP et Trolling</h3>
-                <p>Le **Hors-Rôle (HRP)** doit être minimal. Le respect envers les autres joueurs et le staff est primordial. **Tout comportement toxique, insultant ou le 'Trolling' est passible d'un bannissement immédiat.**</p>
-            </div>
-        </section>
+            <hr>
 
-        <section class="regle-section">
-            <h2 data-aos="fade-up">3. Zones et Actions Spécifiques</h2>
+            <section class="regle-section">
+                <h2 data-aos="fade-right">2. Véhicules et Conduite (R31-R60)</h2>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>2.1 Conduite et Accidents (R31-R40)</h3>
+                    <p>Pour un trafic routier réaliste.</p>
+                    <ul class="features">
+                        <li>(R31) Respecter le code de la route (feux, stop, vitesse) est obligatoire, sauf en course-poursuite.</li>
+                        <li>(R32) Le délit de fuite après un accident doit être justifié RP (vous êtes blessé ou en danger).</li>
+                        <li>(R33) Jouer les conséquences d'un accident est obligatoire (blessures, dégâts, appel aux secours).</li>
+                        <li>(R34) La conduite hors-piste doit être limitée aux véhicules tout-terrain.</li>
+                        <li>(R35) Le **Drive-By** (tirer depuis un véhicule en tant que conducteur) est interdit.</li>
+                        <li>(R36) Les véhicules ne sont pas des armes. Le Car-Kill intentionnel est sévèrement puni.</li>
+                        <li>(R37) Le vol de véhicules doit être justifié par un script RP (crochetage, menaces).</li>
+                        <li>(R38) Interdiction d'abandonner son véhicule sur la voie publique de manière abusive.</li>
+                        <li>(R39) L'utilisation de véhicules de fonction (LSPD, EMS) à des fins personnelles est interdite.</li>
+                        <li>(R40) La vitesse excessive dans les zones résidentielles (villes, quartiers) est interdite.</li>
+                    </ul>
+                </div>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>2.2 Immobilisation et Poursuites (R41-R50)</h3>
+                    <p>Déroulement des scènes de poursuite.</p>
+                    <ul class="features">
+                        <li>(R41) Les forces de l'ordre doivent utiliser des sommations verbales avant d'utiliser la force létale.</li>
+                        <li>(R42) Les criminels doivent stopper leur véhicule après un pneu crevé ou un moteur détruit.</li>
+                        <li>(R43) Les sauts irréalistes (sauts de ponts, falaises) en voiture sont considérés comme du PowerGaming.</li>
+                        <li>(R44) L'utilisation de véhicules aériens sans licence RP est interdite.</li>
+                        <li>(R45) Le blocage abusif des routes sans justification RP et signalisation est interdit.</li>
+                        <li>(R46) Après un accident grave, vous ne pouvez pas reprendre la conduite immédiatement.</li>
+                        <li>(R47) Les poursuites doivent être crédibles. Ne pas utiliser de voies impraticables.</li>
+                        <li>(R48) Les véhicules rares ou de luxe ne peuvent pas être utilisés pour des braquages de base.</li>
+                        <li>(R49) L'utilisation de sirènes et gyrophares par des civils est strictement interdite.</li>
+                        <li>(R50) Les vols de véhicules lourds (camions, bus) nécessitent un RP complexe et justifié.</li>
+                    </ul>
+                </div>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>2.3 Utilisation des Garages (R51-R60)</h3>
+                    <p>Règles spécifiques aux garages et parcs.</p>
+                    <ul class="features">
+                        <li>(R51) Sortir un véhicule de son garage en pleine scène RP est interdit.</li>
+                        <li>(R52) Le stockage de drogues ou d'armes dans les garages publics est interdit.</li>
+                        <li>(R53) Chaque joueur est limité à un nombre raisonnable de véhicules actifs en jeu.</li>
+                        <li>(R54) Les garages sont des zones sécurisées. Le vol y est interdit.</li>
+                        <li>(R55) La destruction volontaire d'un véhicule personnel est un acte de Fail RP.</li>
+                        <li>(R56) Les réparations doivent être effectuées par un mécanicien RP (pas instantanées).</li>
+                        <li>(R57) Le fait de conduire un véhicule visiblement endommagé sans jouer les conséquences est interdit.</li>
+                        <li>(R58) Interdiction de faire des drifts ou des burnouts abusifs en ville.</li>
+                        <li>(R59) Les dépanneurs doivent toujours fournir un RP de remorquage professionnel.</li>
+                        <li>(R60) Les concessions de véhicules sont des zones neutres pour l'achat seulement.</li>
+                    </ul>
+                </div>
+            </section>
             
-            <div class="regle-item" data-aos="fade-right">
-                <h3>3.1. Zones dites "Safe"</h3>
-                <p>**Toute action illégale (vol, braquage, agression) est strictement interdite dans les Zones Safe** (ex : Concessionnaire, Hôpital, Fourrière, Banques). Les enlèvements ne peuvent pas débuter ou se terminer dans ces zones.</p>
-            </div>
+            <hr>
+
+            <section class="regle-section">
+                <h2 data-aos="fade-right">3. Combat et Armes (R61-R100)</h2>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>3.1 Utilisation des Armes (R61-R70)</h3>
+                    <p>Règles de port et d'usage des armes à feu et blanches.</p>
+                    <ul class="features">
+                        <li>(R61) Le port d'armes doit être justifié RP (licence, fonction).</li>
+                        <li>(R62) Le tir doit toujours avoir une raison RP. Le RDM (meurtre aléatoire) est un bannissement immédiat.</li>
+                        <li>(R63) Interdiction de tirer dans des zones à forte affluence de civils sans raison extrême.</li>
+                        <li>(R64) Le vol d'armes aux forces de l'ordre doit être un RP très développé.</li>
+                        <li>(R65) Les armes lourdes (lance-roquettes, minigun) sont interdites, sauf événement Admin.</li>
+                        <li>(R66) Toute personne portant un masque est considérée comme suspecte et armée.</li>
+                        <li>(R67) Le fait de recharger son arme en plein combat doit être joué de manière réaliste.</li>
+                        <li>(R68) Les fusillades doivent impliquer un nombre maximal de participants (limite fixée par l'Admin).</li>
+                        <li>(R69) Utiliser des lasers ou des lampes de poche sur son arme doit être joué RP (aveuglement).</li>
+                        <li>(R70) Les munitions ne sont pas infinies. Le jeu doit rester crédible.</li>
+                    </ul>
+                </div>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>3.2 Scènes de Prise d'Otage (R71-R80)</h3>
+                    <p>Déroulement des prises d'otages et braquages.</p>
+                    <ul class="features">
+                        <li>(R71) Les prises d'otages doivent être déclarées et ne peuvent avoir lieu que si les FDO sont connectées.</li>
+                        <li>(R72) Un otage ne peut pas être un ami du preneur d'otage (cop-baiting).</li>
+                        <li>(R73) Le nombre d'otages est limité au nombre de preneurs d'otages + 1.</li>
+                        <li>(R74) Les preneurs d'otages doivent avoir une exigence RP crédible (pas de sommes astronomiques).</li>
+                        <li>(R75) L'otage doit coopérer et jouer la peur de la mort (Fear RP).</li>
+                        <li>(R76) Il est interdit de tuer l'otage gratuitement sans raison RP suite à un échec des négociations.</li>
+                        <li>(R77) L'utilisation de *Blackout RP* (perdre connaissance) pour échapper à une prise d'otage est du Fail RP.</li>
+                        <li>(R78) Les braquages de supérettes sont limités en fréquence par joueur.</li>
+                        <li>(R79) Le braquage d'un autre joueur civil ne doit pas être abusif et doit être joué avec dialogue.</li>
+                        <li>(R80) Les forces de l'ordre doivent tenter de négocier avant l'assaut.</li>
+                    </ul>
+                </div>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>3.3 Blessures et Coma (R81-R90)</h3>
+                    <p>Gestion réaliste des conséquences physiques.</p>
+                    <ul class="features">
+                        <li>(R81) Après une balle, votre personnage est gravement blessé et ne peut pas courir.</li>
+                        <li>(R82) Le *Pain RP* (jouer la douleur) est obligatoire après une blessure ou un accident.</li>
+                        <li>(R83) En cas de coma, votre personnage doit oublier les éléments de la scène et les personnes impliquées (Vomit RP interdit).</li>
+                        <li>(R84) Les secouristes (EMS) doivent fournir un RP médical complet.</li>
+                        <li>(R85) Le vol sur un joueur en coma est interdit.</li>
+                        <li>(R86) Le passage par l'hôpital est obligatoire après un coma.</li>
+                        <li>(R87) Les blessures graves doivent avoir des conséquences RP durables (béquille, rééducation).</li>
+                        <li>(R88) Utiliser des kits de soins instantanés pour ignorer le RP blessure est interdit.</li>
+                        <li>(R89) Le suicide RP est interdit, sauf validation très stricte par l'administration.</li>
+                        <li>(R90) Simuler des blessures pour obtenir des avantages est interdit.</li>
+                    </ul>
+                </div>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="400">
+                    <h3>3.4 Forces de l'Ordre (R91-R100)</h3>
+                    <p>Règles spécifiques aux FDO (LSPD, Sheriff).</p>
+                    <ul class="features">
+                        <li>(R91) Les FDO doivent toujours agir dans le cadre de la loi du serveur.</li>
+                        <li>(R92) La corruption des FDO doit être un RP très développé et non la norme.</li>
+                        <li>(R93) Les FDO ne peuvent pas utiliser leur équipement hors service (civils).</li>
+                        <li>(R94) L'utilisation excessive de la force (brutalité policière) doit être justifiée RP.</li>
+                        <li>(R95) La fouille des individus doit toujours être justifiée par un motif valable (Suspicion, flagrant délit).</li>
+                        <li>(R96) Les FDO doivent toujours donner les droits avant l'interrogatoire (Mise en garde Miranda).</li>
+                        <li>(R97) Le *Cop-Baiting* (provoquer les FDO dans le but d'être pourchassé) est interdit.</li>
+                        <li>(R98) Les FDO doivent avoir un effectif minimum en ligne pour pouvoir effectuer des braquages de banque/bijouterie.</li>
+                        <li>(R99) La destruction d'un véhicule civil pour stopper une poursuite doit être le dernier recours.</li>
+                        <li>(R100) Les FDO sont responsables de la vérification des licences d'armes et de véhicules.</li>
+                    </ul>
+                </div>
+            </section>
             
-            <div class="regle-item" data-aos="fade-right" data-aos-delay="100">
-                <h3>3.2. Le Coon RP (COP RP)</h3>
-                <p>Le jeu des forces de l'ordre (Police/Gendarmerie) doit respecter les lois en vigueur dans le jeu. **Toute abus de pouvoir ou utilisation de son statut pour des fins personnelles est interdit.**</p>
-            </div>
-        </section>
-        
+            <hr>
+
+            <section class="regle-section">
+                <h2 data-aos="fade-right">4. Illégal, Groupes et Économie (R101-R132)</h2>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>4.1 Groupes Illégaux (R101-R115)</h3>
+                    <p>Comportement et activité des gangs et mafias.</p>
+                    <ul class="features">
+                        <li>(R101) Tout gang ou organisation doit être validé par l'administration.</li>
+                        <li>(R102) Les guerres de territoires nécessitent une justification RP très solide.</li>
+                        <li>(R103) Les lieux de deal ou de fabrication de drogue sont des zones RP actives.</li>
+                        <li>(R104) Le recrutement de nouveaux membres doit être un RP de longue durée et crédible.</li>
+                        <li>(R105) Le kidnapping de FDO ou de politiciens doit être très bien préparé et justifié.</li>
+                        <li>(R106) L'alliance entre gangs doit être ponctuelle et ne pas former une faction dominante permanente.</li>
+                        <li>(R107) Le *Zerg RP* (être toujours plus nombreux pour dominer) est interdit.</li>
+                        <li>(R108) Les menaces envers les familles HRP des joueurs sont bannissables.</li>
+                        <li>(R109) Les gangs sont limités à un certain effectif maximum en jeu simultanément.</li>
+                        <li>(R110) Le racket doit être ciblé et justifié, pas aléatoire et abusif.</li>
+                        <li>(R111) L'argent sale doit être blanchi via les processus RP établis.</li>
+                        <li>(R112) Interdiction d'utiliser des véhicules d'entreprise légale pour des activités illégales.</li>
+                        <li>(R113) Les zones de sécurité (Banque, Hôpital) ne peuvent pas servir de repaire pour le illégal.</li>
+                        <li>(R114) Le vol de ressources des autres organisations illégales doit être joué.</li>
+                        <li>(R115) Le respect des codes d'honneur entre organisations est fortement encouragé.</li>
+                    </ul>
+                </div>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>4.2 Business et Civils (R116-R125)</h3>
+                    <p>Règles pour les entreprises et le rôle des civils.</p>
+                    <ul class="features">
+                        <li>(R116) Toute entreprise légale doit être enregistrée et validée.</li>
+                        <li>(R117) Les civils doivent jouer leur profession de manière réaliste (horaires, responsabilités).</li>
+                        <li>(R118) Le prix des biens et services doit rester cohérent avec l'économie du serveur.</li>
+                        <li>(R119) Les business ne peuvent pas vendre des produits illégaux sans validation RP.</li>
+                        <li>(R120) Le RP de la pauvreté ou de la richesse extrême doit être bien interprété.</li>
+                        <li>(R121) Les licenciements et embauches doivent être joués RP (contrats, entretien).</li>
+                        <li>(R122) Le **God RP** (jouer une personne invincible ou trop influente) est interdit.</li>
+                        <li>(R123) Les entreprises ne peuvent pas refuser de servir des individus sans motif RP valable.</li>
+                        <li>(R124) Le RP politique (maire, gouvernement) suit des règles très strictes données par l'Admin.</li>
+                        <li>(R125) La création de monnaie ou de ressources par un bug est un bannissement immédiat.</li>
+                    </ul>
+                </div>
+                <div class="regle-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>4.3 Finalisation et Sanctions (R126-R132)</h3>
+                    <p>Règles de fin et avertissements.</p>
+                    <ul class="features">
+                        <li>(R126) La sanction sera toujours à la discrétion de l'équipe administrative (Avertissement, ban temporaire, ban définitif).</li>
+                        <li>(R127) L'ignorance du règlement n'est pas une excuse.</li>
+                        <li>(R128) Le règlement peut être mis à jour sans préavis. Consultez-le régulièrement.</li>
+                        <li>(R129) Toutes les règles s'appliquent sur toutes les plateformes (Discord, Jeu, Tchat HRP).</li>
+                        <li>(R130) Le non-respect du Fear RP est l'une des infractions les plus graves pour un joueur RP.</li>
+                        <li>(R131) Si vous avez un doute sur une action, demandez à un modérateur HRP via le tchat d'aide.</li>
+                        <li>(R132) En rejoignant le serveur, vous acceptez l'intégralité de ce règlement.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Nom du Serveur RP. Un Roleplay de qualité.</p>
-    </footer>
+    <footer>
+        <p>&copy; 2025 Serveur RP. Tous droits réservés.</p>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1200, 
-            once: true 
+            duration: 1000,
+            once: true,
         });
     </script>
+
 </body>
 </html>

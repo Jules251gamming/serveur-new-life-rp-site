@@ -3,104 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serveur New Life RP | Accueil</title>
-    
+    <title>Accueil - Serveur RP : Le Futur du Roleplay</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Styles spécifiques pour le Hero (grande image ou bannière) */
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('[Image de fond du serveur RP ou de la ville]'); /* Remplacer par une vraie image */
+            background-size: cover;
+            background-position: center;
+            height: 85vh; /* Hauteur de la bannière */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5) inset;
+        }
+
+        #hero h1 {
+            font-size: 4.5em;
+            color: var(--primary-color);
+            text-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        #hero p {
+            font-size: 1.5em;
+            color: #ccc;
+            margin-bottom: 40px;
+            max-width: 800px;
+        }
+
+        /* Styles pour les sections d'extrait (similaires aux cartes mais plus simples) */
+        .extrait-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .extrait-card {
+            background-color: var(--card-background);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+        .extrait-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+        .extrait-card h4 {
+            color: var(--glow-light);
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .extrait-card p {
+            color: #C0C0C0;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 1000px) {
+            #hero h1 {
+                font-size: 3.5em;
+            }
+            #hero p {
+                font-size: 1.3em;
+            }
+            .extrait-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header class="hero-section">
-        <nav>
-            <div class="logo">Serveur RP</div>
-            <ul>
-                <li><a href="index.html" class="active">Accueil</a></li>
-                <li><a href="notre-histoire.html">Notre Histoire</a></li> 
-                <li><a href="reglement.html">Règlement</a></li>
-                <li><a href="https://discord.gg/votre_lien" target="_blank" class="btn-orange">Rejoindre Discord</a></li> 
-            </ul>
-        </nav>
-        <div class="hero-content">
-            <h1 class="typewriter-text">Le Futur du Roleplay.</h1>
-            <p data-aos="fade-up" data-aos-delay="200">Notre serveur est en développement (BETA). Une expérience professionnelle vous attend.</p>
-            <a href="#fonctionnalites" class="btn-orange" data-aos="fade-up" data-aos-delay="400">Découvrir les fonctionnalités</a>
+    <nav>
+        <a href="index.html" class="logo">Serveur RP</a>
+        <ul>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="notre-histoire.html">Notre Histoire</a></li>
+            <li><a href="personnages.html">Personnages</a></li>
+            <li><a href="reglement.html">Règlement</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="aide-faq.html">Aide & FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="connexion.html" class="btn-orange">Connexion / Inscription</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="hero">
+            <h1 data-aos="fade-up">Le Futur du Roleplay.</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Notre serveur est en développement (BETA). Une expérience **professionnel** vous attend.</p> 
+            <a href="#fonctionnalites" class="btn-primary" data-aos="zoom-in" data-aos-delay="400" style="width: auto; padding: 15px 30px;">Découvrir les fonctionnalités</a>
+        </section>
+
+        <div class="content-container">
+            <section id="fonctionnalites">
+                <h2 class="title-orange" data-aos="fade-down">Notre Héritage</h2>
+                <p class="subtitle" data-aos="fade-up">Des années d'expérience et d'innovation pour une immersion totale.</p>
+
+                <div class="extrait-grid">
+                    <div class="extrait-card" data-aos="fade-up">
+                        <h4><i class="fas fa-history"></i> Histoire et Lore Riches</h4>
+                        <p>Cinq ans de passion pour le Roleplay ont permis de bâtir un environnement narratif profond et cohérent, où chaque décision compte.</p>
+                    </div>
+                    <div class="extrait-card" data-aos="fade-up" data-aos-delay="200">
+                        <h4><i class="fas fa-users-cog"></i> Système de Gangs Avancé</h4>
+                        <p>Un mécanisme de gestion de territoires, de ressources et de hiérarchie propre, offrant des opportunités de Roleplay complexes et dynamiques.</p>
+                    </div>
+                    <div class="extrait-card" data-aos="fade-up" data-aos-delay="400">
+                        <h4><i class="fas fa-code"></i> Développement Constant</h4>
+                        <p>Des mises à jour hebdomadaires, des correctifs rapides et l'ajout continu de contenu unique basé sur les retours de la communauté.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="reglement-extrait">
+                <h2 class="title-orange" data-aos="fade-down">Extrait du Règlement</h2>
+                <p class="subtitle" data-aos="fade-up">Quelques règles fondamentales pour garantir une expérience de Roleplay saine.</p>
+
+                <div class="extrait-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="extrait-card" data-aos="fade-left">
+                        <h4><i class="fas fa-shield-alt"></i> Le Fair-Play est la Règle d'Or</h4>
+                        <p>Toute forme de "metagaming" (utilisation d'informations HRP en RP) et de "Powergaming" est strictement interdite pour assurer l'équité.</p>
+                    </div>
+                    <div class="extrait-card" data-aos="fade-up">
+                        <h4><i class="fas fa-user-lock"></i> Priorité à la Qualité RP</h4>
+                        <p>Nous encourageons les scénarios réalistes et bien développés. Évitez les scènes abusives ou les actions sans conséquences logiques.</p>
+                    </div>
+                    <div class="extrait-card" data-aos="fade-right">
+                        <h4><i class="fas fa-gavel"></i> Respect des Décisions du Staff</h4>
+                        <p>Les modérateurs et administrateurs sont les gardiens du Roleplay. Leurs décisions en matière de règles doivent être respectées sans discussion en jeu.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="reglement.html" class="btn-primary" style="width: 300px;">Lire le Règlement Complet</a>
+                </div>
+            </section>
         </div>
-    </header>
-
-    <main class="content-container">
-        
-        <section id="histoire">
-            <h2 class="title-orange" data-aos="fade-up">Notre Héritage</h2>
-            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Un projet né d'une passion en 2020.</p>
-
-            <div class="histoire-resume-card" data-aos="zoom-in" data-aos-delay="300">
-                <h3>Cinq ans de passion pour le Roleplay</h3>
-                <p>Lancé initialement en 2020, notre serveur est le fruit d'une volonté inébranlable de créer une expérience RP réaliste et profonde. Découvrez comment nous sommes passés d'un petit concept à une communauté active, soutenue par des systèmes d'économie et de justice uniques.</p>
-                <a href="notre-histoire.html" class="btn-primary" style="margin-top: 15px;">Lire l'histoire complète</a>
-            </div>
-            <hr>
-        </section>
-
-        <section id="fonctionnalites">
-            <h2 class="title-orange" data-aos="fade-up">Nos Fonctionnalités Uniques</h2>
-            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Ce qui fait la différence sur New Life RP.</p>
-
-            <div class="cards-grid">
-                <div class="feature-card" data-aos="fade-right">
-                    <h3>Économie Réaliste</h3>
-                    <p>Un système économique poussé avec des emplois légaux et illégaux équilibrés.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Système de Gangs</h3>
-                    <p>Possibilité de créer ou de rejoindre des organisations avec des QG personnalisés.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-left" data-aos-delay="400">
-                    <h3>Développement Constant</h3>
-                    <p>Notre équipe est active et ajoute de nouvelles mises à jour chaque semaine.</p>
-                </div>
-            </div>
-            
-            <hr>
-        </section>
-
-        <section class="regle-section">
-            <h2 class="title-orange" data-aos="fade-up">Extrait du Règlement</h2>
-            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Respecter ces bases pour une expérience RP de qualité.</p>
-            
-            <div class="regle-item" data-aos="fade-up" data-aos-delay="200">
-                <h3>Règle 1 : Fear RP</h3>
-                <p>Vous devez toujours simuler la peur lorsque votre vie est menacée.</p>
-            </div>
-            <div class="regle-item" data-aos="fade-up" data-aos-delay="300">
-                <h3>Règle 2 : Le Metagaming</h3>
-                <p>Il est strictement interdit d'utiliser des informations obtenues en dehors du RP (Meta).</p>
-            </div>
-            
-            <a href="reglement.html" class="btn-primary" style="margin-top: 20px;" data-aos="zoom-in">Lire le Règlement Complet</a>
-        </section>
-        
-        <hr>
-
-        <section id="rejoindre" style="text-align: center;">
-            <h2 class="title-orange" data-aos="fade-up">Prêt à Nous Rejoindre ?</h2>
-            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Le début de votre nouvelle vie RP commence ici.</p>
-            <a href="https://discord.gg/votre_lien" target="_blank" class="btn-orange" style="font-size: 1.2em;" data-aos="zoom-in" data-aos-delay="200">Accès Direct au Discord</a>
-        </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2025 Serveur New Life RP. Tous droits réservés.</p>
+        <p>&copy; 2025 Serveur RP. Tous droits réservés. | Mentions Légales</p>
     </footer>
-    
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1200, 
-            once: true 
+            duration: 1000,
+            once: true,
         });
     </script>
+
 </body>
 </html>

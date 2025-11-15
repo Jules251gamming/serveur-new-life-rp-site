@@ -1,391 +1,398 @@
-/* ================================================= */
-/* VARIABLES ET STYLES GÉNÉRAUX                      */
-/* ================================================= */
-
+/* --- Variables de Design (MODIFIÉES POUR LE STYLE "PRO ORANGE") --- */
 :root {
-    --orange-accent: #FF6600; /* Orange vif pour les accents, les boutons et les titres */
-    --background-dark: #1A1A1A; /* Fond sombre principal (pour le haut de la page) */
-    --background-card: #222222; /* Fond pour les cartes/blocs (règles, fonctionnalités) */
-    --text-light: #FFFFFF; /* Texte blanc pour la lisibilité sur fond sombre */
-    --text-secondary: #AAAAAA; /* Gris clair pour les sous-titres et les paragraphes secondaires */
+    --primary-color: #FFA500; /* Orange vif mais professionnel */
+    --secondary-color: #262626; /* Gris très foncé pour la navigation et les barres */
+    --background-color: #121212; /* Fond presque noir pour un contraste élégant */
+    --text-color: #E0E0E0; /* Texte légèrement plus clair pour la lisibilité */
+    --glow-light: #FFD700; /* Or/Jaune pour les accents brillants (prix, titres importants) */
+    --card-background: #1C1C1C; /* Fond des cartes légèrement plus clair que le background */
+    --card-hover-shadow: 0 12px 35px rgba(0, 0, 0, 0.6); /* Ombre au survol plus prononcée */
+    --border-color: rgba(255, 255, 255, 0.08); /* Bordures plus subtiles */
 }
 
+/* --- Styles de Base et Typographie --- */
 body {
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    
-    /* MODIFICATION CLÉ : Dégradé plus doux du noir vers le bleu très foncé */
-    background: linear-gradient(to bottom, 
-                #1A1A1A 0%,      /* Noir pur au début */
-                #12121e 50%,     /* Transition progressive vers un bleu nuit très sombre */
-                #0b0b2b 100%);   /* Bleu nuit plus profond à la fin */
-    background-attachment: fixed; /* Le fond reste fixe, donnant l'impression que la couleur change à mesure que le contenu défile. */
-    
-    color: var(--text-light); 
     line-height: 1.6;
 }
 
-a {
-    color: var(--orange-accent); 
-    text-decoration: none;
-    transition: color 0.3s;
+.content-container {
+    width: 90%;
+    max-width: 1400px; 
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
-a:hover {
-    color: #E65C00; 
-}
-
-h1, h2, h3 {
-    font-weight: 700;
-    color: var(--text-light);
-}
-
-/* --- Boutons et Accents Oranges avec dégradé animé au survol --- */
-.btn-orange, .btn-primary {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--orange-accent); /* Fond par défaut */
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background 0.5s ease, transform 0.2s, box-shadow 0.3s; 
-    
-    position: relative;
-    overflow: hidden; 
-    z-index: 1; 
-}
-
-.btn-orange:hover, .btn-primary:hover {
-    background-color: transparent; 
-    transform: translateY(-2px); 
-    box-shadow: 0 0 15px rgba(255, 102, 0, 0.7); 
-}
-
-/* Pseudo-élément pour l'effet de dégradé au survol des boutons */
-.btn-orange::before, .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #FF6600, #E65C00, #FF6600); /* Dégradé pour le survol */
-    background-size: 200% 200%;
-    opacity: 0; 
-    transition: opacity 0.5s ease, background-position 0.5s ease;
-    z-index: -1; 
-    border-radius: 4px; 
-}
-
-.btn-orange:hover::before, .btn-primary:hover::before {
-    opacity: 1; 
-    background-position: 100% 0%; 
-}
-
-/* ================================================= */
-/* STRUCTURE ET NAVIGATION                           */
-/* ================================================= */
-
-/* En-tête (pour la page d'accueil) */
-.hero-section {
-    min-height: 100vh; 
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    padding: 80px 0 120px 0;
+.title-orange {
+    color: var(--primary-color);
     text-align: center;
-
-    /* NOUVEAU DÉGRADÉ ORANGE ANIMÉ POUR LA BANNIÈRE (plus subtil) */
-    background: linear-gradient(-45deg, #222222, #FF6600, #222222, #E65C00, #222222); 
-    background-size: 400% 400%; 
-    animation: heroGradientMovement 25s ease infinite; 
+    font-weight: 700;
+    font-size: 2.8em; /* Légèrement plus grand */
+    text-shadow: 0 0 15px rgba(255, 165, 0, 0.5); /* Glow orange plus intense */
+    margin-bottom: 25px; /* Plus d'espace */
 }
 
-/* Clé d'animation pour le mouvement du fond de la bannière */
-@keyframes heroGradientMovement {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.subtitle, .section-description {
+    text-align: center;
+    color: #B0B0B0; /* Gris légèrement plus doux */
+    margin-bottom: 30px; /* Plus d'espace */
+    font-size: 1.1em;
 }
 
+h3 {
+    color: var(--glow-light); /* Titres de section en doré */
+    font-weight: 600;
+    margin-top: 50px; /* Plus d'espace au-dessus */
+    padding-bottom: 15px; /* Plus d'espace sous la bordure */
+    border-bottom: 2px solid var(--border-color); /* Bordure subtile */
+    font-size: 1.8em;
+}
+
+hr {
+    border-color: var(--border-color);
+    margin: 60px 0; /* Plus d'espace pour la HR */
+}
+
+/* --- NAVIGATION --- */
 nav {
+    background-color: var(--secondary-color);
+    padding: 18px 5%; /* Plus de padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    position: absolute;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Ombre plus profonde */
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0; 
-    z-index: 10;
+    z-index: 1000;
 }
 
-.logo {
-    font-size: 1.8em;
+nav .logo {
+    color: var(--primary-color);
+    font-size: 1.6em; /* Légèrement plus grand */
     font-weight: 700;
-    color: var(--orange-accent); 
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    overflow-x: auto; 
+    white-space: nowrap; 
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 25px; /* Plus d'espace entre les liens */
+    flex-shrink: 0;
 }
 
 nav ul li a {
-    color: var(--text-light);
-    font-weight: 400;
-    padding-bottom: 3px;
-    transition: color 0.3s;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 12px; /* Plus de padding */
+    transition: color 0.3s ease, border-bottom 0.3s ease, background-color 0.3s ease; /* Transition pour le background */
+    border-radius: 4px; /* Coins arrondis pour les liens */
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: var(--orange-accent);
-    border-bottom: 2px solid var(--orange-accent);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    background-color: rgba(255, 165, 0, 0.1); /* Léger fond orange au survol */
 }
 
-/* Contenu de la Bannière (Page d'accueil) */
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto; 
-    padding-top: 50px; 
-}
-
-.hero-content h1 {
-    font-size: 3.5em;
-    margin-bottom: 15px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    color: var(--text-secondary);
-    margin-bottom: 40px;
-    
-    /* ANIMATION : Glitch Textuel (moins fréquente) */
-    animation: textGlitch 20s infinite step-end; 
-}
-
-/* Clés d'animation pour le Glitch */
-@keyframes textGlitch {
-    0% {
-        text-shadow: 2px 0 0 #ff00c3, -2px 0 0 #00ffff;
-        transform: translate(0);
-    }
-    5% {
-        text-shadow: -2px 0 0 #ff00c3, 2px 0 0 #00ffff;
-        transform: translate(2px, 2px);
-    }
-    10% {
-        text-shadow: 0 0 0 #ff00c3, 0 0 0 #00ffff;
-        transform: translate(0);
-    }
-    100% {
-        text-shadow: none;
-    }
-}
-
-
-/* ================================================= */
-/* STYLES DES SECTIONS COMMUNES                      */
-/* ================================================= */
-
-main {
-    padding: 50px 0;
-}
-
-.content-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-section {
-    margin-bottom: 60px;
-}
-
-/* --- Titres des Pages/Sections --- */
-.title-orange {
-    color: var(--orange-accent); 
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: var(--text-secondary);
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 30px;
-}
-
-/* --- Ligne de Séparation --- */
-hr {
+/* Boutons de Navigation (Orange) */
+.btn-orange {
+    background-color: var(--primary-color);
+    color: var(--background-color) !important; /* Texte sombre sur bouton orange */
+    padding: 10px 18px; /* Plus de padding */
+    border-radius: 6px; /* Coins plus arrondis */
+    text-transform: uppercase;
+    font-weight: 700; /* Plus gras */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Ajout box-shadow */
     border: none;
-    height: 1px;
-    background-color: var(--orange-accent);
-    margin: 30px 0;
-    opacity: 0.5;
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4); /* Ombre subtile */
 }
 
-
-/* ================================================= */
-/* ANIMATION TEXTE - Typewriter                      */
-/* ================================================= */
-
-.typewriter-text {
-    overflow: hidden; 
-    white-space: nowrap; 
-    margin: 0 auto; 
-    letter-spacing: .15em; 
-    animation: typing 3.5s steps(40, end) forwards; 
-    width: 0; 
+.btn-orange:hover {
+    background-color: #E69500; /* Orange légèrement plus foncé au survol */
+    transform: translateY(-3px); /* Plus de soulèvement */
+    box-shadow: 0 6px 15px rgba(255, 165, 0, 0.6); /* Ombre plus intense */
+    border-bottom: none !important;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+/* Bouton d'Achat/Primaire (dans les cartes) */
+.btn-primary {
+    display: block;
+    background-color: var(--primary-color);
+    color: var(--background-color); /* Texte sombre sur bouton orange */
+    padding: 14px 0; /* Plus de padding */
+    border-radius: 8px; /* Coins plus arrondis */
+    text-decoration: none;
+    font-weight: 700; /* Plus gras */
+    margin-top: 25px; /* Plus d'espace au-dessus */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box; 
+    box-shadow: 0 3px 8px rgba(255, 165, 0, 0.3); /* Ombre subtile */
 }
 
-/* Curseur clignotant */
-.typewriter-text::after {
-    content: '|';
-    border-right: .08em solid var(--orange-accent); 
-    animation: 
-        blink-caret .75s step-end infinite;
+.btn-primary:hover {
+    background-color: #E69500;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(255, 165, 0, 0.5);
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--orange-accent); }
-}
-
-
-/* ================================================= */
-/* STYLES SPÉCIFIQUES À L'HISTOIRE (RÉSUMÉ)          */
-/* ================================================= */
-
-.histoire-resume-card {
-    max-width: 700px;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: var(--background-card);
-    border-radius: 10px;
-    border-left: 5px solid var(--orange-accent); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-.histoire-resume-card h3 {
-    color: var(--text-light);
-    margin-top: 0;
-    font-size: 1.8em;
-}
-
-.histoire-resume-card p {
-    color: var(--text-secondary);
-    margin-bottom: 25px;
-}
-
-
-/* ================================================= */
-/* STYLES SPÉCIFIQUES AUX CARTES DE FONCTIONNALITÉS  */
-/* ================================================= */
-
-/* Clés d'animation pour le dégradé pulsé sur les cartes (plus subtil) */
-@keyframes cardGradientPulse {
-    0% {
-        background-position: 0% 50%;
-        box-shadow: 0 0 5px rgba(255, 102, 0, 0.1); 
-    }
-    50% {
-        background-position: 100% 50%;
-        box-shadow: 0 0 10px rgba(255, 102, 0, 0.3); 
-    }
-    100% {
-        background-position: 0% 50%;
-        box-shadow: 0 0 5px rgba(255, 102, 0, 0.1);
-    }
-}
-
-.cards-grid {
+/* --- GRILLES ET CARTES PRODUITS (Boutique) --- */
+.product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 30px; 
-    padding: 20px 0;
-}
-
-.feature-card {
-    padding: 30px;
-    border-radius: 8px;
-    border-top: 5px solid var(--orange-accent); 
-    text-align: left;
-    transition: transform 0.3s;
-    
-    /* Fond dégradé animé pour les cartes (plus subtil) */
-    background: linear-gradient(-45deg, var(--background-card), #333333, var(--background-card));
-    background-size: 200% 200%; 
-    animation: cardGradientPulse 10s infinite ease-in-out; 
-}
-
-.feature-card:hover {
-    transform: translateY(-5px); 
-}
-
-.feature-card h3 {
-    color: var(--orange-accent);
-    margin-top: 0;
-}
-
-
-/* ================================================= */
-/* STYLES SPÉCIFIQUES AU RÈGLEMENT                   */
-/* ================================================= */
-
-.regle-section h2 {
-    color: var(--orange-accent); 
-    border-bottom: 2px solid var(--background-card);
-    padding-bottom: 5px;
+    gap: 40px; /* Espace encore augmenté */
     margin-top: 40px;
+    padding: 0 15px; 
 }
 
-.regle-item {
-    background-color: var(--background-card); 
-    padding: 15px;
-    border-radius: 8px;
+.product-card {
+    background-color: var(--card-background);
+    padding: 30px; /* Plus de padding interne */
+    border-radius: 16px; /* Rayon plus prononcé */
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Ombre plus profonde */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease; 
+    border: 1px solid var(--border-color); /* Bordure subtile */
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-8px); /* Soulèvement plus prononcé */
+    box-shadow: var(--card-hover-shadow); 
+    border-color: rgba(255, 165, 0, 0.4); /* Légère bordure orange au survol */
+}
+
+.product-card h4 {
+    font-size: 1.6em; /* Légèrement plus grand */
+    color: var(--primary-color);
+    margin: 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-card .price {
+    font-size: 2.5em; /* Plus grand */
+    font-weight: 700;
+    color: var(--glow-light); /* Prix en doré */
+    margin: 20px 0 25px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.4); /* Glow doré sur le prix */
+}
+
+.product-card .tag {
+    display: block;
+    color: #A0A0A0; /* Gris plus doux */
+    font-size: 1em; /* Légèrement plus grand */
     margin-bottom: 15px;
 }
 
-.regle-item h3 {
-    color: var(--text-light); 
-    margin-top: 0;
-    margin-bottom: 5px;
+/* Badges */
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    color: var(--background-color); /* Texte sombre sur badge orange */
+    padding: 7px 18px; /* Plus de padding */
+    font-size: 0.9em; /* Plus grand */
+    font-weight: 700;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); 
+}
+
+.badge.gold { background-color: #FFD700; color: var(--background-color); } /* Or */
+.badge.diamond { background-color: #00BFFF; color: var(--background-color); } /* Bleu Diamant */
+.badge.orange { background-color: #FF8C00; color: var(--background-color); } /* Orange spécifique pour certains badges */
+.badge.blue { background-color: #1E90FF; color: var(--background-color); }
+
+/* Avantages (Features) */
+.product-card .features {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.product-card .features li {
+    padding: 8px 0; /* Plus de padding */
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.04); /* Bordure plus fine */
+    font-size: 1em;
+    color: #C0C0C0; /* Texte des features plus clair */
+}
+
+.product-card .features li:last-child {
+    border-bottom: none;
+}
+
+.product-card .features i {
+    color: var(--primary-color); /* Icônes en orange */
+    margin-right: 12px;
+    font-size: 1.1em; /* Icônes légèrement plus grandes */
+}
+
+/* Surlignage VIP/Packs Spéciaux */
+.gold-border { border: 2px solid #FFD700 !important; box-shadow: 0 0 15px rgba(255, 215, 0, 0.5) !important;} /* Glow doré */
+.diamond-border { border: 2px solid #00BFFF !important; box-shadow: 0 0 15px rgba(0, 191, 255, 0.5) !important;} /* Glow bleu */
+.ultimate-border { border: 4px solid var(--primary-color) !important; box-shadow: 0 0 25px rgba(255, 165, 0, 0.8) !important; } /* Bordure et glow orange intenses */
+.ultimate-border:hover { transform: scale(1.04) translateY(-10px); } /* Plus d'impact au survol */
+
+/* Styles spécifiques aux Coins */
+.coin-card {
+    border-color: rgba(255, 165, 0, 0.3) !important; /* Bordure orange subtile */
+}
+.coin-card .features i {
+    color: #FFD700; /* Icônes des coins en Or */
+}
+
+/* Listes d'avantages longues (pour la carte 400 avantages) */
+.product-card .features-long {
+    list-style: none;
+    padding: 0 15px 0 0; /* Plus de padding */
+    margin: 20px 0;
+    font-size: 0.9em; /* Légèrement plus grand */
+    text-align: left;
+    max-height: 280px; /* Hauteur ajustée */
+    overflow-y: auto;
+    color: #E0E0E0 !important; /* Texte plus clair */
+}
+
+.product-card .features-long li {
+    margin-bottom: 6px;
+    padding: 4px 0;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+}
+.product-card .features-long li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* Style de la barre de défilement pour features-long (Chrome/Safari) */
+.features-long::-webkit-scrollbar {
+    width: 8px; /* Plus large */
+}
+.features-long::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 165, 0, 0.4); /* Barre orange semi-transparente */
+    border-radius: 4px;
+}
+.features-long::-webkit-scrollbar-track {
+    background: var(--card-background);
+}
+
+/* --- STYLES SPÉCIFIQUES AUX NOUVELLES PAGES (CONNEXION, CONTACT, ETC.) --- */
+.page-content {
+    padding: 50px; /* Plus de padding */
+    background-color: var(--card-background);
+    border-radius: 16px; /* Plus arrondis */
+    margin-top: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Ombre profonde */
+}
+.page-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    font-size: 2.2em;
+}
+.form-group {
+    margin-bottom: 25px; /* Plus d'espace */
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* Plus d'espace */
     font-weight: 600;
+    color: var(--glow-light); /* Labels en doré */
+    font-size: 1.1em;
+}
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 12px; /* Plus de padding */
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Plus arrondis */
+    background-color: #1A1A1A; /* Fond des champs sombre */
+    color: var(--text-color);
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: var(--primary-color); /* Bordure orange au focus */
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.4); /* Glow orange au focus */
+    outline: none;
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 180px; /* Hauteur min plus grande */
 }
 
-
-/* ================================================= */
-/* PIED DE PAGE (Footer)                             */
-/* ================================================= */
-
+/* --- FOOTER --- */
 footer {
-    background-color: #0F0F0F; 
-    color: var(--text-secondary);
+    background-color: var(--secondary-color); /* Fond du footer en gris foncé */
+    color: #A0A0A0; /* Texte gris doux */
     text-align: center;
-    padding: 20px 0;
-    border-top: 2px solid rgba(255, 102, 0, 0.3); 
+    padding: 25px 0; /* Plus de padding */
+    margin-top: 70px; /* Plus d'espace au-dessus */
+    border-top: 1px solid var(--border-color);
+    font-size: 0.95em;
 }
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+@media (max-width: 800px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    nav ul {
+        overflow-x: auto; 
+    }
+    nav {
+        justify-content: center;
+        flex-wrap: wrap; /* Permet aux éléments de la nav de passer à la ligne */
+    }
+    nav .logo, nav ul li {
+        margin-bottom: 10px; /* Espace si la nav se wrap */
+    }
+    .title-orange {
+        font-size: 2.2em;
+    }
+    .page-content {
+        padding: 30px;
+    }
+}
+@media (max-width: 500px) {
+    .product-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .title-orange {
+        font-size: 1.8em;
+    }
+    nav ul {
+        flex-direction: column; /* Menu de navigation en colonne sur très petit écran */
+        align-items: flex-start;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .btn-orange {
+        margin-top: 15px;
+    }
+}
+```http://googleusercontent.com/image_generation_content/4

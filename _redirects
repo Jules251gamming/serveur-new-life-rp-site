@@ -1,0 +1,8 @@
+# REDIRECTIONS POUR LA SÉCURITÉ ET LE CONTRÔLE D'ACCÈS
+
+# Règle 1 : Protéger TOUTES les pages (sauf celles qui sont publiques)
+/! /connexion.html 401! Role=member
+
+# Règle 2 : Exclure les pages publiques du besoin d'authentification
+/connexion.html 200
+/css/* 200
